@@ -37,4 +37,15 @@ public class FirstController {
 
     record User(String username){}
 
+    @PostMapping("/metodoComHeaders")
+    public String metodoComQueryHeader(@RequestHeader(name = "name") String name) {
+        return "Parâmetro com o valor de headers é " + name;
+    }
+
+    @PostMapping("/metodoComHeaders2")
+    public String metodoComQueryHeader(@RequestHeader Map<String, String> allHeaders) {
+        System.out.println(allHeaders.entrySet());
+        return "Parâmetro com o valor de headers é " + allHeaders.entrySet();
+    }
+
 }
