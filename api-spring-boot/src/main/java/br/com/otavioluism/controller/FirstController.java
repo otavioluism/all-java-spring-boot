@@ -1,4 +1,4 @@
-package br.com.otavioluism.api_spring_boot;
+package br.com.otavioluism.controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
