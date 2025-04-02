@@ -1,6 +1,8 @@
 package br.com.otavioluism.controller;
 
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -48,4 +50,14 @@ public class FirstController {
         return "Parâmetro com o valor de headers é " + allHeaders.entrySet();
     }
 
+    @GetMapping("/metodoComResponseEntity/{id}")
+    public ResponseEntity<Object> metodoComResponseEntity(@PathVariable(name = "id") Integer id) {
+        User user = new User("otavio teste");
+
+        if (id > 5) {
+            return ResponseEntity.status(HttpStatus.CREATED).body(user);
+        }
+
+        return ResponseEntity.badRequest().body("O número é menor do que 5");
+    }
 }
