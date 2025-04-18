@@ -1,4 +1,4 @@
-package br.com.otavioluism.gestao_vagas.modules.useCases;
+package br.com.otavioluism.gestao_vagas.modules.candidate.useCases;
 
 import br.com.otavioluism.gestao_vagas.exceptions.UserFoundException;
 import br.com.otavioluism.gestao_vagas.modules.candidate.CandidateEntity;

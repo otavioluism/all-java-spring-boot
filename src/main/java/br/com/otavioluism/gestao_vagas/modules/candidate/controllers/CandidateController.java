@@ -1,9 +1,7 @@
 package br.com.otavioluism.gestao_vagas.modules.candidate.controllers;
 
-import br.com.otavioluism.gestao_vagas.exceptions.UserFoundException;
 import br.com.otavioluism.gestao_vagas.modules.candidate.CandidateEntity;
-import br.com.otavioluism.gestao_vagas.modules.candidate.CandidateRepository;
-import br.com.otavioluism.gestao_vagas.modules.useCases.CreateCandidateUseCase;
+import br.com.otavioluism.gestao_vagas.modules.candidate.useCases.CreateCandidateUseCase;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
