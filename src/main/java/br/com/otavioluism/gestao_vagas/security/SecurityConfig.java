@@ -14,8 +14,9 @@ public class SecurityConfig {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> {
-                    auth.requestMatchers("/candidate/").permitAll() // esta rota permitimos nao ter autenticacao (publica)
-                            .requestMatchers("/company/").permitAll(); // esta rota permitimos nao ter autenticacao (publica)
+                    auth.requestMatchers("/candidate/").permitAll() // esta rota permitimos nao ter autenticacao (rota publica)
+                            .requestMatchers("/company/").permitAll() // esta rota permitimos nao ter autenticacao (rota publica)
+                            .requestMatchers("/auth/company").permitAll(); // esta rota permitimos nao ter autenticacao (rota publica)
                     auth.anyRequest().authenticated(); // qualquer outra rota deve ter autenticacao
                 });
         return http.build();
